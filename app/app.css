@@ -1,25 +1,39 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+  background-color: #444444;
+  font-family: "Open Sans";
 }
 
-.menu:before {
-  content: "[";
+.container-fluid {
+  padding: 0;
 }
 
-.menu:after {
-  content: "]";
+.title-bar {
+  background-color: white;
+  padding: 0 20px;
+  border-bottom: 2px solid black;
 }
 
-.menu > li {
-  display: inline;
+.title-area {
+  display: inline-block;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.logo {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  margin: 8px;
+  vertical-align: top;
+}
+
+.logo-title {
+  color: #101010;
+  margin-top: 6px;
+  font-size: 32px;
+}
+
+.logo-subtitle {
+  font-size: 18px;
+  margin-top: -13px;
 }
