@@ -15,8 +15,13 @@ body {
   border-bottom: 2px solid black;
 }
 
+.logo-area {
+  text-align: center;
+}
+
 .title-area {
   display: inline-block;
+  text-align: center;
 }
 
 .logo {
@@ -36,4 +41,22 @@ body {
 .logo-subtitle {
   font-size: 18px;
   margin-top: -13px;
+}
+
+.right-side-controls {
+  line-height: 85px;
+}
+
+.right-side-controls > div {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .logo-area {
+    text-align: left;
+  }
+
+  .right-side-controls > div {
+    text-align: right;
+  }
 }
