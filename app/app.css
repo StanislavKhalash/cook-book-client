@@ -109,6 +109,13 @@ body {
   margin-right: 10px;
 }
 
+.menu-selected-marker {
+  float: right;
+  color: #ddd;
+  margin-right: 0;
+  margin-top: 8px;
+}
+
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
