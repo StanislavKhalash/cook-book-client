@@ -1,7 +1,7 @@
 /* app css stylesheet */
 
 body {
-  background-color: #444444;
+  background-color: #444;
   font-family: "Open Sans";
 }
 
@@ -59,4 +59,60 @@ body {
   .right-side-controls > div {
     text-align: right;
   }
+}
+
+.menu-area {
+  background-color: #333;
+  color: #ccc;
+  padding-left: 0;
+  width: 280px;
+  min-height: 100vh;
+  padding-top: 30px;
+}
+
+.menu-area ul {
+  padding-left: 0;
+}
+
+.menu-area .btn:hover {
+  color: #ccc;
+}
+
+.menu {
+  list-style-type: none;
+  vertical-align: top;
+}
+
+.menu ul {
+  display: inline;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu li {
+  font-size: 18px;
+  line-height: 3em;
+  cursor: pointer;
+}
+
+.menu li div {
+  display: inline-block;
+  width: 90%;
+  padding-left: 16px;
+}
+
+.selectable-item:hover {
+  background-color: #555;
+}
+
+.menu-icon {
+  margin-right: 10px;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
