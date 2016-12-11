@@ -1,4 +1,4 @@
-<div class="menu-area" ng-controller="MenuController">
+<div class="menu-area" ng-controller="MenuController" ng-show="isMenuOpen()">
     <ul class="menu" ng-repeat="item in items">
         <li class="selectable-item" ng-click="navigateTo(item)">
             <div class="no-select">

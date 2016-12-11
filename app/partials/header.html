@@ -1,10 +1,15 @@
-<div class="title-bar">
+<div class="title-bar" ng-controller="NavbarController">
     <div class="row">
         <div class="logo-area col-sm-6">
             <img class="logo" ng-src="images/cook-book-logo.png" />
             <div class="title-area">
                 <p class="logo-title">Cook Book</p>
                 <p class="logo-subtitle">Now Eat This</p>
+            </div>
+            <div class="collapsed-menu pull-right" ng-if="showMenuButton">
+                <button type="button" class="btn nav-button" ng-click="toggle()">
+                    <i class="fa fa-bars"></i>
+                </button>
             </div>
         </div>
         <div class="right-side-controls col-sm-6">

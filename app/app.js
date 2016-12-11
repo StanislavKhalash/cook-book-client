@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var cookBookApp = angular.module('cookBookApp', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
+var app = angular.module('cookBookApp', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/dashboard', {
             templateUrl: 'partials/dashboard.html',

@@ -2,7 +2,7 @@
  * Created by Stanislav on 12/11/2016.
  */
 
-cookBookApp.controller('MenuController', ['$scope', '$location', function ($scope, $location) {
+app.controller('MenuController', function ($scope, $location, menu) {
     $scope.items = [
         {
             routePath: '/dashboard',
@@ -38,5 +38,9 @@ cookBookApp.controller('MenuController', ['$scope', '$location', function ($scop
         $location.path(item.routePath);
     };
 
+    $scope.isMenuOpen = function () {
+        return menu.isOpen();
+    }
+
     updateSelectedItem();
-}]);
+});
