@@ -2,20 +2,24 @@
  * Created by Stanislav on 12/11/2016.
  */
 
-app.factory('screen', function ($window, $timeout) {
+app.factory('screen', function ($rootScope, $window, $timeout) {
     var service = {};
-    service.hasMobileWidth = false;
-
-    var updateWidth = function() {
-        var screenWidth = $window.innerWidth;
-        service.hasMobileWidth = (screenWidth <= 768);
+    service.screenWidth = false;
+    service.hasMobileWidth = function () {
+        return (service.screenWidth <= 768);
     };
 
-    angular.element($window).on('resize', function () {
+    var updateWidth = function () {
+        $rootScope.$evalAsync(function() {
+            service.screenWidth = $window.innerWidth;
+        });
+    };
+
+    angular.element($window).bind('resize', function () {
         updateWidth();
     });
 
-    $timeout(function() {
+    $timeout(function () {
         updateWidth();
     }, 0);
 

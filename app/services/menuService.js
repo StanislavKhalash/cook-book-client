@@ -14,5 +14,13 @@ app.factory('menu', function () {
         open = !open;
     };
 
+    service.open = function () {
+        open = true;
+    };
+
+    service.close = function() {
+      open = false;
+    };
+
     return service;
 });

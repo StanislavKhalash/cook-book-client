@@ -5,11 +5,11 @@
 app.controller('NavbarController', function ($scope, menu, screen) {
     $scope.showMenuButton = screen.hasMobileWidth;
 
-    screen.subscribe(function() {
-        $scope.$apply(function() {
-            $scope.showMenuButton = screen.hasMobileWidth;
-        });
-    });
+    $scope.$watch(function () {
+        return screen.hasMobileWidth();
+    }, function (hasMobileWidth) {
+        $scope.showMenuButton = hasMobileWidth;
+    }, true);
 
     $scope.toggle = function () {
         menu.toggle();

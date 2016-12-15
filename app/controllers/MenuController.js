@@ -2,7 +2,7 @@
  * Created by Stanislav on 12/11/2016.
  */
 
-app.controller('MenuController', function ($scope, $location, menu) {
+app.controller('MenuController', function ($scope, $location, menu, screen) {
     $scope.items = [
         {
             routePath: '/dashboard',
@@ -40,7 +40,15 @@ app.controller('MenuController', function ($scope, $location, menu) {
 
     $scope.isMenuOpen = function () {
         return menu.isOpen();
-    }
+    };
+
+    $scope.$watch(function () {
+        return screen.hasMobileWidth();
+    }, function (hasMobileWidth) {
+        if (!hasMobileWidth && !menu.isOpen()) {
+            menu.open();
+        }
+    }, true);
 
     updateSelectedItem();
 });
