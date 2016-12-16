@@ -43,9 +43,9 @@ app.controller('MenuController', function ($scope, $location, menu, screen) {
     };
 
     $scope.$watch(function () {
-        return screen.hasMobileWidth();
-    }, function (hasMobileWidth) {
-        if (!hasMobileWidth && !menu.isOpen()) {
+        return screen.isSmall();
+    }, function (isScreenSmall) {
+        if (!isScreenSmall && !menu.isOpen()) {
             menu.open();
         }
     }, true);

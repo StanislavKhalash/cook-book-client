@@ -3,12 +3,12 @@
  */
 
 app.controller('NavbarController', function ($scope, menu, screen) {
-    $scope.showMenuButton = screen.hasMobileWidth;
+    $scope.showMenuButton = screen.isSmall;
 
     $scope.$watch(function () {
-        return screen.hasMobileWidth();
-    }, function (hasMobileWidth) {
-        $scope.showMenuButton = hasMobileWidth;
+        return screen.isSmall();
+    }, function (isScreenSmall) {
+        $scope.showMenuButton = isScreenSmall;
     }, true);
 
     $scope.toggle = function () {
